@@ -11,18 +11,18 @@ load('plant_default_config.mat');
 PLANT_CONST.dt = 0.002;
 
 %% init plant model parameter
-plant_model.mass = 0.886;     % kg
-plant_model.Jxx = 0.016;	% moment of inertia in body x axis
-plant_model.Jyy = 0.016;	% moment of inertia in body y axis
-plant_model.Jzz = 0.0274;	% moment of inertia in body z axis
+plant_model.mass = 0.25;      % 0.886 kg
+plant_model.Jxx = 3.867*1e-4; % 0.016;	% moment of inertia in body x axis
+plant_model.Jyy = 4.418*1e-4; %0.016;	% moment of inertia in body y axis
+plant_model.Jzz = 7.725*1e-4; %0.0274;	% moment of inertia in body z axis
 
 plant_model.Cm = 1.982e-07;	% Rotor torque coefficient(kg.m^2)
-plant_model.Ct = 1.239e-05;	% Rotor thrust coefficient(kg.m^2)
-plant_model.R = 0.225; % Body radius(m)
+plant_model.Ct = 1.16*1e-5; %1.239e-05;	%%% Rotor thrust coefficient(kg.m^2)
+plant_model.R = 0.11; % 0.225; % Body radius(m)
 
 plant_model.motorCr = 718.078; %Motor throttle-speed curve slope(rad/s)
 plant_model.motorWb = 88.448;  %Motor speed-throttle curve constant term(rad/s)
-plant_model.motorT = 0.02;  %Motor inertia time constant(s)
+plant_model.motorT = 0.04;  % 0.02 Motor inertia time constant(s)
 plant_model.motorJm = 0.0001287;    %Moment of inertia of motor rotor + propeller(kg.m^2)
 
 %% Exported Value
